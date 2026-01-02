@@ -90,3 +90,5 @@ modules:
       - Caffeine
       - Dash to Panel
       - Forge
+
+  - type: gschema-overrides

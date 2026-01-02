@@ -1,0 +1,15 @@
+[org.gnome.shell.extensions.dash-to-panel]
+multi-monitors=false
+panel-positions='{"PHL-0x00000648":"LEFT","PHL-0x0000092a":"LEFT"}'
+panel-sizes='{"PHL-0x00000648":56,"PHL-0x0000092a":56}'
+dot-position='LEFT'
+panel-element-positions='{"PHL-0x00000648":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"PHL-0x0000092a":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
+
+[org.gnome.shell.extensions.forge]
+dnd-center-layout='swap'
+stacked-tiling-mode-enabled=false
+tabbed-tiling-mode-enabled=false
+
+[org.gnome.desktop.interface]
+text-scaling-factor=1.5
+cursor-size=48
