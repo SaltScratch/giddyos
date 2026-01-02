@@ -9,7 +9,6 @@ giddyos-post-install: giddyos-configure-firefox giddyos-setup-git giddyos-mount-
 # Configure Firefox
 [group('Setup')]
 giddyos-configure-firefox:
-
     #!/usr/bin/env bash
     set -euo pipefail
 
