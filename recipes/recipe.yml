@@ -27,6 +27,7 @@ modules:
         - cargo
         - docker-cli
         - docker-compose
+        - gh
         - git
         - input-remapper
         - nextcloud-client
