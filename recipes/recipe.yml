@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: giddyos
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: This is my personal OS image. Based on Silverblue
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
@@ -28,6 +28,7 @@ modules:
         - input-remapper
         - nextcloud-client
         - nextcloud-client-nautilus
+        - https://download3.omnissa.com/software/CART26FQ4_LIN64_RPMPKG_2512/Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
         #- topgrade
     remove:
       packages:
