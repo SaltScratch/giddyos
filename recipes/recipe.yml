@@ -21,6 +21,7 @@ modules:
     install:
       packages:
         - btop
+        - cargo
         - git
         - gnome-shell-extension-dash-to-panel
         - gnome-shell-extension-forge
