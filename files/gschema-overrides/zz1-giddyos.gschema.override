@@ -13,3 +13,6 @@ tabbed-tiling-mode-enabled=false
 [org.gnome.desktop.interface]
 text-scaling-factor=1.5
 cursor-size=48
+
+[org.gnome.desktop.wm.preferences]
+button-layout=':minimize,maximize,close'
