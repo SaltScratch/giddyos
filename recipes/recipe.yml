@@ -32,11 +32,6 @@ modules:
         - nextcloud-client
         - nextcloud-client-nautilus
         - topgrade
-        #- https://download3.omnissa.com/software/CART26FQ4_LIN64_RPMPKG_2512/Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
-    group-install:
-      with-optional: true # install optional packages from group
-      packages:
-        - development-tools
     remove:
       packages:
         - firefox
@@ -46,14 +41,12 @@ modules:
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
-        # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
           - ca.desrt.dconf-editor
           - com.discordapp.Discord
           - com.github.tchx84.Flatseal
           - com.heroicgameslauncher.hgl
           - com.mattjakeman.ExtensionManager
-          - com.ml4w.dotfilesinstaller
           - com.ranfdev.DistroShelf
           - com.spotify.Client
           - com.usebottles.bottles
@@ -66,12 +59,8 @@ modules:
           - it.mijorus.gearlever
           - net.codelogistics.webapps
           - net.lutris.Lutris
-          - org.fedoraproject.MediaWriter
-          - org.gnome.baobab
           - org.gnome.Boxes
           - org.gnome.FileRoller
-          - org.gnome.Loupe
-          - org.gnome.Papers
           - org.gnome.SimpleScan
           - org.gnome.TextEditor
           - org.libreoffice.LibreOffice
