@@ -80,3 +80,9 @@ modules:
   - type: justfiles
     validate: true
     install: true
+
+  - type: brew
+    nofile-limits: true # increase nofile limits
+    brew-analytics: false # disable telemetry
+    packages:
+      - topgrade
