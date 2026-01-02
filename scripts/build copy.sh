@@ -1,0 +1,1 @@
+bluebuild switch -r ../recipes/recipe.yml

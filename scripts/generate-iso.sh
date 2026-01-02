@@ -1,0 +1,1 @@
+sudo bluebuild generate-iso --iso-name giddyos.iso recipe ../recipes/recipe.yml
