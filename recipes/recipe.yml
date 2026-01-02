@@ -35,9 +35,8 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - notify: false # Send notification after install/uninstall is finished (true/false)
-        scope: system
-      - scope: user # Also add Flathub user repo, but no user packages
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: user
         install: 
           - ca.desrt.dconf-editor
           - com.discordapp.Discord
