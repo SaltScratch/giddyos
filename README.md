@@ -41,3 +41,8 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 ```bash
 cosign verify --key cosign.pub ghcr.io/saltscratch/giddyos
 ```
+
+## TODO
+  - [x] clean out unneeded packages and just recipes
+  - [ ] dotfiles (chezmoi or fix /usr/etc/skel)
+  - [ ] build iso
