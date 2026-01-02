@@ -20,7 +20,6 @@ modules:
   - type: dnf
     install:
       packages:
-        - bazaar
         - btop
         - git
         - gnome-shell-extension-dash-to-panel
@@ -28,8 +27,7 @@ modules:
         - input-remapper
         - nextcloud-client
         - nextcloud-client-nautilus
-        - topgrade
-        - webapp-manager
+        #- topgrade
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -56,8 +54,10 @@ modules:
           - com.visualstudio.code
           - io.github.Faugus.faugus-launcher
           - io.github.flattool.Ignition
+          - io.github.kolunmi.Bazaar
           - io.github.pwr_solaar.solaar
           - it.mijorus.gearlever
+          - net.codelogistics.webapps
           - net.lutris.Lutris
           - org.fedoraproject.MediaWriter
           - org.gnome.baobab
