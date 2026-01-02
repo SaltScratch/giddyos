@@ -4,7 +4,7 @@ default:
 
 # Post-install setup
 [group('Install')]
-giddyos-post-install: giddyos-configure-git giddyos-mount-drives giddyos-download-horizon-client && giddyos-install-horizon-client
+giddyos-post-install: giddyos-setup-git giddyos-mount-drives giddyos-download-horizon-client && giddyos-install-horizon-client
 
 # Download Horizon Client
 [group('Install')]
