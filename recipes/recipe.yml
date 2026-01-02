@@ -36,34 +36,36 @@ modules:
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: user
+        scope: system
         install: 
           - ca.desrt.dconf-editor
-          - com.discordapp.Discord
           - com.github.tchx84.Flatseal
-          - com.heroicgameslauncher.hgl
           - com.mattjakeman.ExtensionManager
           - com.ranfdev.DistroShelf
-          - com.spotify.Client
           - com.usebottles.bottles
-          - com.valvesoftware.Steam
-          - com.visualstudio.code
-          - io.github.Faugus.faugus-launcher
           - io.github.flattool.Ignition
-          - io.github.kolunmi.Bazaar
           - io.github.pwr_solaar.solaar
           - it.mijorus.gearlever
           - net.codelogistics.webapps
-          - net.lutris.Lutris
           - org.gnome.Boxes
           - org.gnome.FileRoller
+          - page.codeberg.libre_menu_editor.LibreMenuEditor
+      - scope: user
+        install: 
+          - com.discordapp.Discord
+          - com.heroicgameslauncher.hgl
+          - com.spotify.Client
+          - com.valvesoftware.Steam
+          - com.visualstudio.code
+          - io.github.Faugus.faugus-launcher
+          - io.github.kolunmi.Bazaar
+          - net.lutris.Lutris
           - org.gnome.SimpleScan
           - org.gnome.TextEditor
           - org.libreoffice.LibreOffice
           - org.mozilla.firefox
           - org.mozilla.Thunderbird
           - org.videolan.VLC
-          - page.codeberg.libre_menu_editor.LibreMenuEditor
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
