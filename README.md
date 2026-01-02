@@ -48,3 +48,4 @@ cosign verify --key cosign.pub ghcr.io/saltscratch/giddyos
   - [x] build iso
   - [ ] move user dirs to just recipe
   - [ ] move remaining user flatpaks to system list
+  - [ ] remove unwanted gnome extensions
