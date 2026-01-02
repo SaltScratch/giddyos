@@ -44,5 +44,7 @@ cosign verify --key cosign.pub ghcr.io/saltscratch/giddyos
 
 ## TODO
   - [x] clean out unneeded packages and just recipes
-  - [ ] dotfiles (chezmoi or fix /usr/etc/skel)
-  - [ ] build iso
+  - [x] dotfiles (chezmoi or fix /usr/etc/skel)
+  - [x] build iso
+  - [ ] move user dirs to just recipe
+  - [ ] move remaining user flatpaks to system list
