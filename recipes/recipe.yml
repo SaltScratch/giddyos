@@ -7,7 +7,7 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42 # latest is also supported if you want new updates ASAP
+image-version: latest
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -20,11 +20,19 @@ modules:
   - type: dnf
     repos:
       copr:
-        - atim/starship
+        # - atim/starship
     install:
       packages:
-        - micro
-        - starship
+        - bazaar
+        - btop
+        - git
+        - gnome-shell-extension-dash-to-panel
+        - gnome-shell-extension-forge
+        - input-remapper
+        - nextcloud-client
+        - nextcloud-client-nautilus
+        - topgrade
+        - webapp-manager
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -38,8 +46,35 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
+          - ca.desrt.dconf-editor
+          - com.discordapp.Discord
+          - com.github.tchx84.Flatseal
+          - com.heroicgameslauncher.hgl
+          - com.mattjakeman.ExtensionManager
+          - com.ml4w.dotfilesinstaller
+          - com.ranfdev.DistroShelf
+          - com.spotify.Client
+          - com.usebottles.bottles
+          - com.valvesoftware.Steam
+          - com.visualstudio.code
+          - io.github.Faugus.faugus-launcher
+          - io.github.flattool.Ignition
+          - io.github.pwr_solaar.solaar
+          - it.mijorus.gearlever
+          - net.lutris.Lutris
+          - org.fedoraproject.MediaWriter
+          - org.gnome.baobab
+          - org.gnome.Boxes
+          - org.gnome.FileRoller
           - org.gnome.Loupe
+          - org.gnome.Papers
+          - org.gnome.SimpleScan
+          - org.gnome.TextEditor
+          - org.libreoffice.LibreOffice
+          - org.mozilla.firefox
+          - org.mozilla.Thunderbird
+          - org.videolan.VLC
+          - page.codeberg.libre_menu_editor.LibreMenuEditor
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
