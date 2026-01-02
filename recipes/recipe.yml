@@ -37,7 +37,6 @@ modules:
       with-optional: true # install optional packages from group
       packages:
         - development-tools
-        - development-libraries
     remove:
       packages:
         - firefox
