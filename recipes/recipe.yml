@@ -89,3 +89,7 @@ modules:
       - Forge
 
   - type: gschema-overrides
+
+  - type: chezmoi
+    repository: "https://github.com/saltscratch/dotfiles" # my dotfiles repo
+    file-conflict-policy: replace # override changed files with those from the repo
