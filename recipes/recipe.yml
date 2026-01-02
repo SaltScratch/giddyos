@@ -23,8 +23,6 @@ modules:
         - btop
         - cargo
         - git
-        - gnome-shell-extension-dash-to-panel
-        - gnome-shell-extension-forge
         - input-remapper
         - nextcloud-client
         - nextcloud-client-nautilus
@@ -85,3 +83,10 @@ modules:
   - type: brew
     nofile-limits: true # increase nofile limits
     brew-analytics: false # disable telemetry
+
+  - type: gnome-extensions
+    install:
+      - AppIndicator and KStatusNotifierItem Support
+      - Caffeine
+      - Dash to Panel
+      - Forge
