@@ -101,4 +101,3 @@ giddyos-setup-user-dirs:
     rm -rf $HOME/Templates
     rm -rf $HOME/Videos
     rm -rf $HOME/Documents
- 
