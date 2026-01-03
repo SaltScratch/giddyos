@@ -82,6 +82,7 @@ modules:
       - Caffeine
       - Dash to Panel
       - Forge
+      - App Grid Wizard
 
   - type: gschema-overrides
 
