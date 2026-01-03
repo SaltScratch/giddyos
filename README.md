@@ -46,6 +46,7 @@ cosign verify --key cosign.pub ghcr.io/saltscratch/giddyos
   - [x] clean out unneeded packages and just recipes
   - [x] dotfiles (chezmoi or fix /usr/etc/skel)
   - [x] build iso
-  - [ ] move user dirs to just recipe
-  - [ ] move remaining user flatpaks to system list
+  - [x] move user dirs to just recipe
+  - [x] move remaining user flatpaks to system list
   - [ ] remove unwanted gnome extensions
+  - [ ] yafti
