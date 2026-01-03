@@ -74,6 +74,7 @@ giddyos-setup-git:
     # Configure Git
     git config --global user.name "$git_username"
     git config --global user.email "$git_email"
+    git config --global pull.rebase true
 
     echo "Git setup complete"
 
