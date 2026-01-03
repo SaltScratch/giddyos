@@ -4,7 +4,7 @@ default:
 
 # Post-install setup
 [group('Install')]
-giddyos-post-install: giddyos-configure-firefox giddyos-setup-git giddyos-mount-drives giddyos-download-horizon-client && giddyos-install-horizon-client
+giddyos-post-install: giddyos-setup-user-dirs giddyos-configure-firefox giddyos-setup-git giddyos-mount-drives giddyos-download-horizon-client && giddyos-install-horizon-client
 
 # Configure Firefox
 [group('Setup')]
@@ -76,3 +76,28 @@ giddyos-setup-git:
     git config --global user.email "$git_email"
 
     echo "Git setup complete"
+
+# Setup User Directories
+[group('Setup')]
+giddyos-setup-user-dirs:
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    echo "Setting up user directories..."
+    sed -i.bak 's/$HOME\/Desktop\//$SHOME\//' $HOME/.config/user-dirs.dirs 
+    sed -i 's/$HOME\/Music\//$SHOME\//' $HOME/.config/user-dirs.dirs 
+    sed -i 's/$HOME\/Pictures\//$SHOME\//' $HOME/.config/user-dirs.dirs 
+    sed -i 's/$HOME\/Public\//$SHOME\//' $HOME/.config/user-dirs.dirs 
+    sed -i 's/$HOME\/Templates\//$SHOME\//' $HOME/.config/user-dirs.dirs 
+    sed -i 's/$HOME\/Videos\//$SHOME\//' $HOME/.config/user-dirs.dirs 
+    sed -i 's/$HOME\/Documents\//$SHOME\/Nextcloud\/Documents\//' $HOME/.config/user-dirs.dirs 
+
+    echo "Removing old user directories"
+    rm -rf $HOME/Desktop
+    rm -rf $HOME/Music
+    rm -rf $HOME/Pictures
+    rm -rf $HOME/Public
+    rm -rf $HOME/Templates
+    rm -rf $HOME/Videos
+    rm -rf $HOME/Documents
+ 

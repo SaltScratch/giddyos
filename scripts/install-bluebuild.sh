@@ -1,1 +1,0 @@
-cargo install --locked blue-build
