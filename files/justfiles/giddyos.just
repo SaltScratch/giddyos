@@ -4,7 +4,44 @@ default:
 
 # Post-install setup
 [group('Install')]
-giddyos-post-install: giddyos-configure-firefox giddyos-setup-git giddyos-mount-drives giddyos-install-horizon-client
+giddyos-post-install: giddyos-install-flatpaks giddyos-setup-user-dirs giddyos-configure-firefox giddyos-setup-git giddyos-mount-drives giddyos-install-horizon-client
+
+# Install flatpaks
+[group('Install')]
+giddyos-install-flatpaks:
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    echo "Installing flatpaks..."
+
+    flatpak install -y org.mozilla.firefox
+    flatpak install -y org.mozilla.Thunderbird
+    flatpak install -y com.mattjakeman.ExtensionManager
+    flatpak install -y com.valvesoftware.Steam
+    flatpak install -y com.visualstudio.code
+    flatpak install -y ca.desrt.dconf-editor
+    flatpak install -y com.github.tchx84.Flatseal
+    flatpak install -y com.ranfdev.DistroShelf
+    flatpak install -y com.usebottles.bottles
+    flatpak install -y io.github.flattool.Ignition
+    flatpak install -y io.github.pwr_solaar.solaar
+    flatpak install -y it.mijorus.gearlever
+    flatpak install -y net.codelogistics.webapps
+    flatpak install -y org.gnome.Boxes
+    flatpak install -y org.gnome.FileRoller
+    flatpak install -y page.codeberg.libre_menu_editor.LibreMenuEditor
+    flatpak install -y com.discordapp.Discord
+    flatpak install -y com.heroicgameslauncher.hgl
+    flatpak install -y com.spotify.Client
+    flatpak install -y io.github.Faugus.faugus-launcher
+    flatpak install -y io.github.kolunmi.Bazaar
+    flatpak install -y net.lutris.Lutris
+    flatpak install -y org.gnome.SimpleScan
+    flatpak install -y org.gnome.TextEditor
+    flatpak install -y org.libreoffice.LibreOffice
+    flatpak install -y org.videolan.VLC
+
+    echo "Installation complete."
 
 # Configure Firefox
 [group('Setup')]
