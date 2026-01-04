@@ -14,32 +14,32 @@ giddyos-install-flatpaks:
 
     echo "Installing flatpaks..."
 
-    flatpak install -y org.mozilla.firefox
-    flatpak install -y org.mozilla.Thunderbird
-    flatpak install -y com.mattjakeman.ExtensionManager
-    flatpak install -y com.valvesoftware.Steam
-    flatpak install -y com.visualstudio.code
-    flatpak install -y ca.desrt.dconf-editor
-    flatpak install -y com.github.tchx84.Flatseal
-    flatpak install -y com.ranfdev.DistroShelf
-    flatpak install -y com.usebottles.bottles
-    flatpak install -y io.github.flattool.Ignition
-    flatpak install -y io.github.pwr_solaar.solaar
-    flatpak install -y it.mijorus.gearlever
-    flatpak install -y net.codelogistics.webapps
-    flatpak install -y org.gnome.Boxes
-    flatpak install -y org.gnome.FileRoller
-    flatpak install -y page.codeberg.libre_menu_editor.LibreMenuEditor
-    flatpak install -y com.discordapp.Discord
-    flatpak install -y com.heroicgameslauncher.hgl
-    flatpak install -y com.spotify.Client
-    flatpak install -y io.github.Faugus.faugus-launcher
-    flatpak install -y io.github.kolunmi.Bazaar
-    flatpak install -y net.lutris.Lutris
-    flatpak install -y org.gnome.SimpleScan
-    flatpak install -y org.gnome.TextEditor
-    flatpak install -y org.libreoffice.LibreOffice
-    flatpak install -y org.videolan.VLC
+    flatpak install -y -u org.mozilla.firefox \
+                          org.mozilla.Thunderbird \
+                          com.mattjakeman.ExtensionManager \
+                          com.valvesoftware.Steam \
+                          com.visualstudio.code \
+                          ca.desrt.dconf-editor \
+                          com.github.tchx84.Flatseal \
+                          com.ranfdev.DistroShelf \
+                          com.usebottles.bottles \
+                          io.github.flattool.Ignition \
+                          io.github.pwr_solaar.solaar \
+                          it.mijorus.gearlever \
+                          net.codelogistics.webapps \
+                          org.gnome.Boxes \
+                          org.gnome.FileRoller \
+                          page.codeberg.libre_menu_editor.LibreMenuEditor \
+                          com.discordapp.Discord \
+                          com.heroicgameslauncher.hgl \
+                          com.spotify.Client \
+                          io.github.Faugus.faugus-launcher \
+                          io.github.kolunmi.Bazaar \
+                          net.lutris.Lutris \
+                          org.gnome.SimpleScan \
+                          org.gnome.TextEditor \
+                          org.libreoffice.LibreOffice \
+                          org.videolan.VLC
 
     echo "Installation complete."
 
