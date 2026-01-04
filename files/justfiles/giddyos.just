@@ -19,26 +19,37 @@ giddyos-install-flatpaks:
                           com.mattjakeman.ExtensionManager \
                           com.valvesoftware.Steam \
                           com.visualstudio.code \
-                          ca.desrt.dconf-editor \
                           com.github.tchx84.Flatseal \
+                          io.github.flattool.Ignition \
+                          org.gnome.FileRoller \
+                          page.codeberg.libre_menu_editor.LibreMenuEditor \
+                          io.github.kolunmi.Bazaar \
+                          org.gnome.SimpleScan \
+                          org.gnome.TextEditor \
+                          org.libreoffice.LibreOffice
+    flatpak update -y
+    echo "Installation complete."
+
+# Install more flatpaks
+[group('Install')]
+giddyos-install-more-flatpaks:
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    echo "Installing more flatpaks..."
+
+    flatpak install -y -u ca.desrt.dconf-editor \
                           com.ranfdev.DistroShelf \
                           com.usebottles.bottles \
-                          io.github.flattool.Ignition \
                           io.github.pwr_solaar.solaar \
                           it.mijorus.gearlever \
                           net.codelogistics.webapps \
                           org.gnome.Boxes \
-                          org.gnome.FileRoller \
-                          page.codeberg.libre_menu_editor.LibreMenuEditor \
                           com.discordapp.Discord \
                           com.heroicgameslauncher.hgl \
                           com.spotify.Client \
                           io.github.Faugus.faugus-launcher \
-                          io.github.kolunmi.Bazaar \
                           net.lutris.Lutris \
-                          org.gnome.SimpleScan \
-                          org.gnome.TextEditor \
-                          org.libreoffice.LibreOffice \
                           org.videolan.VLC \
                           org.fedoraproject.MediaWriter
     flatpak update -y
