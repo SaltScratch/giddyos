@@ -102,7 +102,7 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: yafti
-    custom-flatpaks:
-      - Firefox : org.mozilla.firefox
-      - Thunderbird : org.mozilla.Thunderbird
+  # - type: yafti
+  #   custom-flatpaks:
+  #     - Firefox : org.mozilla.firefox
+  #     - Thunderbird : org.mozilla.Thunderbird
