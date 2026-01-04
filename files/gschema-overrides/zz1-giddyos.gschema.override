@@ -14,6 +14,10 @@ tabbed-tiling-mode-enabled=false
 text-scaling-factor=1.5
 cursor-size=48
 color-scheme='prefer-dark'
+enable-hot-corners=false
 
 [org.gnome.desktop.wm.preferences]
 button-layout=':minimize,maximize,close'
+
+[org.gnome.shell.overrides]
+edge-tiling=false
