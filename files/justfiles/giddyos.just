@@ -4,7 +4,7 @@ default:
 
 # Post-install setup
 [group('Install')]
-giddyos-post-install: giddyos-setup-user-dirs giddyos-configure-firefox giddyos-setup-git giddyos-mount-drives giddyos-download-horizon-client && giddyos-install-horizon-client
+giddyos-post-install: giddyos-configure-firefox giddyos-setup-git giddyos-mount-drives giddyos-install-horizon-client
 
 # Configure Firefox
 [group('Setup')]
@@ -27,38 +27,6 @@ giddyos-configure-firefox:
       user_pref("browser.uidensity", 2);
     EOF
 
-# Download Horizon Client
-[group('Install')]
-giddyos-download-horizon-client:
-    #!/usr/bin/env bash
-    set -euo pipefail
-
-    echo "Downloading Horizon Client..."
-    wget -O /tmp/horizon-client.rpm https://download3.omnissa.com/software/CART26FQ4_LIN64_RPMPKG_2512/Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
-    echo "Horizon Client download complete."
-
-# Install Horizon Client
-[group('Install')]
-giddyos-install-horizon-client:
-    #!/usr/bin/env bash
-    set -euo pipefail
-
-    echo "Installing Horizon Client..."
-    sudo rpm-ostree install /tmp/horizon-client.rpm
-
-# Mount drives
-[group('Setup')]
-giddyos-mount-drives:
-    #!/usr/bin/env bash
-    set -euo pipefail
-
-    echo "Mounting drives..."
-
-    sudo mkdir /mnt/games
-    sudo su -c "echo '/dev/disk/by-label/games /mnt/games auto nosuid,nodev,nofail,x-gvfs-show 0 0' >> /etc/fstab"
-    sudo systemctl daemon-reload
-    sudo mount -a
-
 # Setup Git
 [group('Setup')]
 giddyos-setup-git:
@@ -77,6 +45,32 @@ giddyos-setup-git:
     git config --global pull.rebase true
 
     echo "Git setup complete"
+
+# Mount drives
+[group('Setup')]
+giddyos-mount-drives:
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    echo "Mounting drives..."
+
+    sudo mkdir -p /run/media/$USER/games
+    sudo chown $USER:$USER /run/media/$USER/games
+    sudo su -c "echo '/dev/disk/by-label/games /run/media/$USER/games auto nosuid,nodev,nofail,x-gvfs-show 0 0' >> /etc/fstab"
+    sudo systemctl daemon-reload
+    sudo mount -a
+
+# Install Horizon Client
+[group('Install')]
+giddyos-install-horizon-client:
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    echo "Downloading Horizon Client..."
+    wget -O /tmp/horizon-client.rpm https://download3.omnissa.com/software/CART26FQ4_LIN64_RPMPKG_2512/Omnissa-Horizon-Client-2512-8.17.0-20187591429.x64.rpm
+    echo "Horizon Client download complete."
+    echo "Installing Horizon Client..."
+    sudo rpm-ostree install /tmp/horizon-client.rpm
 
 # Setup User Directories
 [group('Setup')]

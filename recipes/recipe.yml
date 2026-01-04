@@ -44,33 +44,33 @@ modules:
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
-        install: 
-          - org.mozilla.firefox
-          - org.mozilla.Thunderbird
-          - com.mattjakeman.ExtensionManager
-          - com.valvesoftware.Steam
-          - com.visualstudio.code
-          - ca.desrt.dconf-editor
-          - com.github.tchx84.Flatseal
-          - com.ranfdev.DistroShelf
-          - com.usebottles.bottles
-          - io.github.flattool.Ignition
-          - io.github.pwr_solaar.solaar
-          - it.mijorus.gearlever
-          - net.codelogistics.webapps
-          - org.gnome.Boxes
-          - org.gnome.FileRoller
-          - page.codeberg.libre_menu_editor.LibreMenuEditor
-          - com.discordapp.Discord
-          - com.heroicgameslauncher.hgl
-          - com.spotify.Client
-          - io.github.Faugus.faugus-launcher
-          - io.github.kolunmi.Bazaar
-          - net.lutris.Lutris
-          - org.gnome.SimpleScan
-          - org.gnome.TextEditor
-          - org.libreoffice.LibreOffice
-          - org.videolan.VLC
+        # install: 
+        #   - org.mozilla.firefox
+        #   - org.mozilla.Thunderbird
+        #   - com.mattjakeman.ExtensionManager
+        #   - com.valvesoftware.Steam
+        #   - com.visualstudio.code
+        #   - ca.desrt.dconf-editor
+        #   - com.github.tchx84.Flatseal
+        #   - com.ranfdev.DistroShelf
+        #   - com.usebottles.bottles
+        #   - io.github.flattool.Ignition
+        #   - io.github.pwr_solaar.solaar
+        #   - it.mijorus.gearlever
+        #   - net.codelogistics.webapps
+        #   - org.gnome.Boxes
+        #   - org.gnome.FileRoller
+        #   - page.codeberg.libre_menu_editor.LibreMenuEditor
+        #   - com.discordapp.Discord
+        #   - com.heroicgameslauncher.hgl
+        #   - com.spotify.Client
+        #   - io.github.Faugus.faugus-launcher
+        #   - io.github.kolunmi.Bazaar
+        #   - net.lutris.Lutris
+        #   - org.gnome.SimpleScan
+        #   - org.gnome.TextEditor
+        #   - org.libreoffice.LibreOffice
+        #   - org.videolan.VLC
       - scope: user
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
