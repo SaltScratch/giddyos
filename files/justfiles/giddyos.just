@@ -41,6 +41,7 @@ giddyos-install-flatpaks:
                           org.libreoffice.LibreOffice \
                           org.videolan.VLC \
                           org.fedoraproject.MediaWriter
+    flatpak update -y
     echo "Installation complete."
 
 # Configure Firefox
