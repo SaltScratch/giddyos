@@ -39,8 +39,8 @@ giddyos-install-flatpaks:
                           org.gnome.SimpleScan \
                           org.gnome.TextEditor \
                           org.libreoffice.LibreOffice \
-                          org.videolan.VLC
-
+                          org.videolan.VLC \
+                          org.fedoraproject.MediaWriter
     echo "Installation complete."
 
 # Configure Firefox
