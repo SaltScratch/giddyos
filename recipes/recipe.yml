@@ -6,7 +6,7 @@ name: giddyos
 description: This is my personal OS image. Based on Silverblue
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/bazzite-gnome
 image-version: latest
 
 # module configuration, executed in order
@@ -25,16 +25,12 @@ modules:
         - terra.repo
     install:
       packages:
-        - btop
         - cargo
         - docker-cli
         - docker-compose
         - gh
-        - git
-        - input-remapper
         - nextcloud-client
         - nextcloud-client-nautilus
-        - topgrade
     remove:
       packages:
         - firefox
