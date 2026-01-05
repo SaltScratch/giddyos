@@ -17,13 +17,11 @@ giddyos-install-flatpaks:
     flatpak install -y -u org.mozilla.firefox \
                           org.mozilla.Thunderbird \
                           com.mattjakeman.ExtensionManager \
-                          com.valvesoftware.Steam \
-                          com.visualstudio.code \
+                          com.vscodium.codium \
                           com.github.tchx84.Flatseal \
                           io.github.flattool.Ignition \
                           org.gnome.FileRoller \
                           page.codeberg.libre_menu_editor.LibreMenuEditor \
-                          io.github.kolunmi.Bazaar \
                           org.gnome.SimpleScan \
                           org.gnome.TextEditor \
                           org.libreoffice.LibreOffice
@@ -43,13 +41,11 @@ giddyos-install-more-flatpaks:
                           com.usebottles.bottles \
                           io.github.pwr_solaar.solaar \
                           it.mijorus.gearlever \
-                          net.codelogistics.webapps \
                           org.gnome.Boxes \
                           com.discordapp.Discord \
                           com.heroicgameslauncher.hgl \
                           com.spotify.Client \
                           io.github.Faugus.faugus-launcher \
-                          net.lutris.Lutris \
                           org.videolan.VLC \
                           org.fedoraproject.MediaWriter
     flatpak update -y
