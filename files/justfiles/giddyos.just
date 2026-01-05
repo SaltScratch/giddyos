@@ -4,7 +4,7 @@ default:
 
 # Post-install setup
 [group('Install')]
-giddyos-post-install: giddyos-install-flatpaks giddyos-setup-user-dirs giddyos-configure-firefox giddyos-setup-git giddyos-mount-drives giddyos-install-horizon-client giddyos-install-bluebuild
+giddyos-post-install: giddyos-install-flatpaks giddyos-setup-user-dirs giddyos-configure-firefox giddyos-setup-git giddyos-mount-drives giddyos-install-horizon-client
 
 # Install flatpaks
 [group('Install')]
@@ -120,15 +120,6 @@ giddyos-install-horizon-client:
     echo "Horizon Client download complete."
     echo "Installing Horizon Client..."
     sudo rpm-ostree install /tmp/horizon-client.rpm
-
-# Install Bluebuild
-[group('Install')]
-giddyos-install-bluebuild:
-    #!/usr/bin/env bash
-    set -euo pipefail
-
-    echo "Installing blue-build..."
-    cargo install --locked blue-build
 
 # Setup User Directories
 [group('Setup')]
