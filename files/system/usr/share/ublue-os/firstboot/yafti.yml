@@ -3,13 +3,13 @@ properties:
   mode: "run-on-change"
 actions:
   post:
-  - run: ujust giddyos-setup-user-dirs
+  - run: ujust giddy-blue-setup-user-dirs
 screens:
   first-screen:
     source: yafti.screen.title
     values:
-      title: "Welcome to GiddyOS!"
-      icon: "/usr/share/giddyos/giddy.png"
+      title: "Welcome to giddy-blue!"
+      icon: "/usr/share/giddy-blue/giddy.png"
       description: |
         This guided installer will help you get started with your new system.
   applications:
@@ -84,9 +84,9 @@ screens:
     source: yafti.screen.title
     values:
       title: "All done!"
-      icon: "/usr/share/giddyos/giddy.png"
+      icon: "/usr/share/giddy-blue/giddy.png"
       links:
         - "Install More Applications":
             run: /usr/bin/gnome-software
       description: |
-        Thanks for trying GiddyOS, we hope you enjoy it!
+        Thanks for trying giddy-blue, we hope you enjoy it!

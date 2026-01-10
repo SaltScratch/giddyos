@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: giddyos
+name: giddy-blue
 # description will be included in the image's metadata
 description: This is my personal OS image. Based on Silverblue
 
@@ -14,10 +14,10 @@ image-version: latest
 modules:
   # - type: os-release
   #   properties:
-  #     ID: giddyos
+  #     ID: giddy-blue
   #     ID_LIKE: silverblue
-  #     NAME: GiddyOS
-  #     PRETTY_NAME: GiddyOS
+  #     NAME: giddy-blue
+  #     PRETTY_NAME: giddy-blue
 
   - type: dnf
     repos:

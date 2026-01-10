@@ -4,11 +4,11 @@ default:
 
 # Post-install setup
 [group('Install')]
-giddyos-post-install: giddyos-install-flatpaks giddyos-setup-user-dirs giddyos-configure-firefox giddyos-setup-git giddyos-mount-drives giddyos-install-horizon-client
+giddy-blue-post-install: giddy-blue-install-flatpaks giddy-blue-setup-user-dirs giddy-blue-configure-firefox giddy-blue-setup-git giddy-blue-mount-drives giddy-blue-install-horizon-client
 
 # Install flatpaks
 [group('Install')]
-giddyos-install-flatpaks:
+giddy-blue-install-flatpaks:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -32,7 +32,7 @@ giddyos-install-flatpaks:
 
 # Install more flatpaks
 [group('Install')]
-giddyos-install-more-flatpaks:
+giddy-blue-install-more-flatpaks:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -57,7 +57,7 @@ giddyos-install-more-flatpaks:
 
 # Configure Firefox
 [group('Setup')]
-giddyos-configure-firefox:
+giddy-blue-configure-firefox:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -78,7 +78,7 @@ giddyos-configure-firefox:
 
 # Setup Git
 [group('Setup')]
-giddyos-setup-git:
+giddy-blue-setup-git:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -97,7 +97,7 @@ giddyos-setup-git:
 
 # Mount drives
 [group('Setup')]
-giddyos-mount-drives:
+giddy-blue-mount-drives:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -111,7 +111,7 @@ giddyos-mount-drives:
 
 # Install Horizon Client
 [group('Install')]
-giddyos-install-horizon-client:
+giddy-blue-install-horizon-client:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -123,7 +123,7 @@ giddyos-install-horizon-client:
 
 # Setup User Directories
 [group('Setup')]
-giddyos-setup-user-dirs:
+giddy-blue-setup-user-dirs:
     #!/usr/bin/env bash
     set -euo pipefail
 

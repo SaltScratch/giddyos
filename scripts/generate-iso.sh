@@ -1,2 +1,2 @@
-sudo bluebuild generate-iso --iso-name giddyos.iso image ghcr.io/saltscratch/giddyos
-#sudo bluebuild generate-iso --iso-name giddyos.iso recipe ../recipes/recipe.yml
+sudo bluebuild generate-iso --iso-name giddy-blue.iso image ghcr.io/saltscratch/giddy-blue
+#sudo bluebuild generate-iso --iso-name giddy-blue.iso recipe ../recipes/recipe.yml
